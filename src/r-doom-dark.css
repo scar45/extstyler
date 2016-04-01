@@ -1,0 +1,385 @@
+/*
+
+/r/Doom Stylesheet by scar45 (03/2016)
+
+	An updated version of the /r/Doom style, which aims to bring in influence from the old and new Doom series of amazing games.
+	Colour scheme has been designed to resemble fire and blood (red and orange) sitting on top of a dark theme, since Doom is, you know, dark.
+	Older, sprite-based elements from the original games adorn the left side of the UI, where newer bits from Doom (2016) are inlayed to the right.
+
+	I hope you enjoy this, and if you have any feedback, please toss me a PM @ /u/scarFortyFive
+
+	Thanks!
+
+[Update] Snoo image in header, since this can't be handled strictly by CSS:
+
+	Change:
+		<img id="header-img" src="//b.thumbs.redditmedia.com/KoDFy3XO2ZsI4QZcPksWPFf5nz4-cjnSOZjzPAeQRPY.png" alt="Doom" height="100" width="155">
+	to:
+		<img id="header-img" src="http://i.imgur.com/SBUyA5h.png" alt="Doom">
+
+*/
+
+/* IMPORTS */
+
+/* Source Sans */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* Roboto */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+/* STYLES */
+
+html.r-doom-dark-fireblood body {
+	background: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-bg-dark.jpg") no-repeat top right fixed #050302;
+    background-size: cover;
+}
+
+html.r-doom-dark-fireblood a {
+    text-decoration: none;
+    color: #FF6300;
+	-webkit-transition: all 256ms ease-in-out;
+	-moz-transition: all 256ms ease-in-out;
+	-ms-transition: all 256ms ease-in-out;
+	-o-transition: all 256ms ease-in-out;
+	transition: all 256ms ease-in-out;
+}
+
+html.r-doom-dark-fireblood #header {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-full-bg.jpg");
+    background-repeat: repeat-x;
+    height: 128px;
+    background-position: center 19px;
+	border-bottom: 1px solid #000;
+}
+
+html.r-doom-dark-fireblood .pagename a {
+    color: #fff;
+	font-size: 1.666em;
+	position: relative;
+	top: 6px;
+	margin-right: 20px;
+    text-shadow: 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 5px #f00;
+}
+
+html.r-doom-dark-fireblood .dropdown.srdrop .selected {
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood #sr-header-area {
+    background-color: #4a0202;
+    border-bottom: 1px solid #930d0d;
+}
+
+html.r-doom-dark-fireblood .sr-bar a {
+    color: #e37373;
+}
+
+html.r-doom-dark-fireblood .sr-bar a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood #header-img {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/snoo-doomguy.png");
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 0;
+    height: 110px;
+    width: 111px;
+}
+
+html.r-doom-dark-fireblood .tabmenu li a {
+    padding: 2px 6px 10px 6px;
+    background-color: #980000;
+	background: -moz-linear-gradient(top, rgba(152,0,0,1) 0%, rgba(152,0,0,1) 72%, rgba(152,0,0,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(152,0,0,1) 0%,rgba(152,0,0,1) 72%,rgba(152,0,0,0) 100%);
+	background: linear-gradient(to bottom, rgba(152,0,0,1) 0%,rgba(152,0,0,1) 72%,rgba(152,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#980000', endColorstr='#00980000',GradientType=0 );
+    border: 1px solid #f00;
+    border: 0;
+    border-bottom: 0;
+    border-radius: 0 8px 0 0;
+    color: #eee;
+}
+
+html.r-doom-dark-fireblood .tabmenu li.selected a {
+    color: #980000;
+    background-color: #fff;
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 72%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 72%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    border: 1px solid #fff;
+    border: 0;
+    border-bottom: 0;
+}
+
+html.r-doom-dark-fireblood .tabmenu li a:hover {
+	background-color: #f00;
+}
+
+html.r-doom-dark-fireblood #header-bottom-right {
+    background-color: #980000;
+	padding: 4px 14px;
+}
+
+html.r-doom-dark-fireblood .user {
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood .user a {
+	color: rgb(255, 163, 163);
+}
+
+html.r-doom-dark-fireblood .menuarea {
+    border-bottom: 1px dashed #c92d2d;
+    padding: 0 10px 0 0;
+    margin: 5px 5px 20px;
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood .dropdown.lightdrop .selected {
+    text-decoration: none;
+    color: #E42222;
+}
+
+html.r-doom-dark-fireblood .drop-choices {
+    border: 1px solid red;
+    background-color: #980000;
+}
+
+html.r-doom-dark-fireblood .drop-choices a.choice {
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood .drop-choices a.choice:hover {
+    background-color: #fff;
+	color: #980000;
+}
+
+html.r-doom-dark-fireblood .side {
+    background-color: rgba(98, 0, 0, 0.45);
+    padding: 10px;
+    margin: 0 0 0 20px;
+	color: #fff;
+}
+
+html.r-doom-dark-fireblood .side a {
+    text-decoration: none;
+    color: #D87B7B;
+}
+
+html.r-doom-dark-fireblood .login-form-side {
+    border: 1px solid #750e0a;
+    background: rgba(0,0,0,0.666);
+}
+
+html.r-doom-dark-fireblood .morelink {
+    border: 1px solid #ff7e00;
+    background: #ff0606 ;
+    background-image: none;
+	border-radius: 0 4px 4px 4px;
+}
+
+html.r-doom-dark-fireblood .morelink .nub {
+	background: none;
+}
+
+html.r-doom-dark-fireblood .side .morelink a {
+    text-decoration: none;
+    color: ##ffdab6;
+    letter-spacing: -0.06em;
+    text-transform: lowercase;
+    font-size: 1.166em;
+	color: #fff;
+}
+
+html.r-doom-dark-fireblood .side .morelink:hover, html.r-doom-dark-fireblood .mlh, html.r-doom-dark-fireblood .morelink:hover .nub, html.r-doom-dark-fireblood .mlhn {
+	background-image: none;
+	background: rgb(255, 99, 0);
+	border: 1px solid rgb(255, 99, 0);
+	-webkit-transition: all 666ms ease-in-out;
+	-moz-transition: all 666ms ease-in-out;
+	-ms-transition: all 666ms ease-in-out;
+	-o-transition: all 666ms ease-in-out;
+	transition: all 666ms ease-in-out;
+}
+
+html.r-doom-dark-fireblood .morelink:hover .nub {
+	display: none;
+}
+
+html.r-doom-dark-fireblood .md {
+    color: #9B7E7E;
+}
+
+html.r-doom-dark-fireblood .md a {
+    color: #d30000;
+    text-decoration: none;
+}
+
+html.r-doom-dark-fireblood .md a:hover {
+    color: rgb(255, 117, 0);
+}
+
+html.r-doom-dark-fireblood .md td, html.r-doom-dark-fireblood .md th {
+    border: 1px solid #750e0a;
+}
+
+html.r-doom-dark-fireblood .md hr {
+    background: #750e0a;
+}
+
+html.r-doom-dark-fireblood .titlebox h1 a {
+    color: #f00;
+}
+
+html.r-doom-dark-fireblood .discuss-ad {
+    color: #933;
+}
+
+html.r-doom-dark-fireblood .content {
+    margin: -5px 0 0;
+    padding-top: 20px;
+	color: #fff;
+}
+
+html.r-doom-dark-fireblood .thing {
+    margin: 5px 0;
+    padding: 5px 0;
+	-webkit-transition: all 256ms ease-in-out;
+	-moz-transition: all 256ms ease-in-out;
+	-ms-transition: all 256ms ease-in-out;
+	-o-transition: all 256ms ease-in-out;
+	transition: all 256ms ease-in-out;
+}
+
+html.r-doom-dark-fireblood .thing:hover {
+	background: rgba(95, 0, 0, 0.3);
+}
+
+html.r-doom-dark-fireblood .link .rank {
+    color: #240C0C;
+    text-align: center;
+    font-weight: bold;
+	margin-top: 21px;
+}
+
+html.r-doom-dark-fireblood .link .score {
+    color: #fff;
+	color: rgb(255, 99, 0);
+	margin: 5px 0;
+	font-size: 1.1em;
+}
+
+html.r-doom-dark-fireblood .thing .title {
+    color: #d72727;
+}
+
+html.r-doom-dark-fireblood .thing .title:hover, html.r-doom-dark-fireblood .thing .title:visited {
+    color: rgb(255, 99, 0);
+}
+
+html.r-doom-dark-fireblood .thing.stickied.link a.title {
+    color: #FFF;
+}
+
+html.r-doom-dark-fireblood .tagline a, html.r-doom-dark-fireblood .search-result-meta a {
+    color: #E4E4E4;
+}
+
+html.r-doom-dark-fireblood .expando-button.video.collapsed, html.r-doom-dark-fireblood .expando-button.selftext.collapsed, html.r-doom-dark-fireblood .expando-button.selftext.collapsed:hover, html.r-doom-dark-fireblood .eb-sch, html.r-doom-dark-fireblood .expando-button.video.collapsed:hover, html.r-doom-dark-fireblood .eb-vch, html.r-doom-dark-fireblood .expando-button.selftext.expanded, html.r-doom-dark-fireblood .eb-se, html.r-doom-dark-fireblood .expando-button.video.expanded, html.r-doom-dark-fireblood .eb-ve, html.r-doom-dark-fireblood .expando-button.video.expanded:hover, html.r-doom-dark-fireblood .eb-veh, html.r-doom-dark-fireblood .expando-button.selftext.expanded:hover, html.r-doom-dark-fireblood .eb-seh {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-sprites.png");
+}
+
+html.r-doom-dark-fireblood .expando-button {
+    background: none;
+}
+
+html.r-doom-dark-fireblood .usertext-body, html.r-doom-dark-fireblood .media-preview {
+	border: 1px solid rgba(255, 0, 0, 0.45);
+	background: rgba(0, 0, 0, 0.667) none repeat scroll 0% 0%;
+	border-radius: 0px 8px 8px 7px;
+}
+
+html.r-doom-dark-fireblood .usertext-body {
+	padding: 0 10px;
+}
+
+html.r-doom-dark-fireblood .media-preview {
+	padding: 10px;
+}
+
+html.r-doom-dark-fireblood .link .usertext-body .md {
+    background: none;
+    border: 0;
+    color: #eee;
+}
+
+html.r-doom-dark-fireblood .tagline .submitter, html.r-doom-dark-fireblood .search-result-meta .submitter {
+    color: #7bdf00;
+}
+
+html.r-doom-dark-fireblood .flair, html.r-doom-dark-fireblood .linkflairlabel {
+    background: #980000;
+    color: #fdd;
+    border: 0px solid #f00;
+}
+
+html.r-doom-dark-fireblood .wiki-page .pageactions .wikiaction-current {
+    color: #fff;
+    background-color: #980000;
+}
+
+html.r-doom-dark-fireblood .wiki-page .pageactions .wikiaction:hover {
+    background-color: #531212;
+}
+
+html.r-doom-dark-fireblood input[type="text"], html.r-doom-dark-fireblood input[type="password"] {
+	border-radius: 4px;
+}
+
+html.r-doom-dark-fireblood #searchexpando, html.r-doom-dark-fireblood #moresearchinfo {
+    color: #600;
+}
+
+html.r-doom-dark-fireblood .midcol {
+    margin-right: 14px;
+    margin-left: 10px;
+}
+
+html.r-doom-dark-fireblood .arrow.up, html.r-doom-dark-fireblood .arrow.down {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-sprites.png");
+}
+
+html.r-doom-dark-fireblood .thumbnail.default, html.r-doom-dark-fireblood .thumbnail.self {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-sprites.png");
+}
+
+html.r-doom-dark-fireblood .entry {
+    padding-left: 5px;
+}
+
+html.r-doom-dark-fireblood .nextprev a, html.r-doom-dark-fireblood .next-suggestions a {
+    padding: 1px 4px 3px;
+    background: #980000;
+    border: 1px solid #f00;
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood .nextprev a:hover, html.r-doom-dark-fireblood .next-suggestions a:hover {
+    background: rgb(255, 99, 0);
+    border: 1px solid #f00;
+}
+
+html.r-doom-dark-fireblood .footer {
+    border: 1px solid #750e0a;
+}
+
+html.r-doom-dark-fireblood .footer .col {
+    border-left: 1px solid #750e0a;
+}
+
+html.r-doom-dark-fireblood .footer .col:first-child {
+    border-left: 0;
+}

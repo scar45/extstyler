@@ -25,13 +25,34 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 /* Roboto */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+@font-face {
+    font-family: 'roboto';
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Regular-webfont.eot');
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Regular-webfont.woff') format('woff'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Bold-webfont.eot');
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Bold-webfont.woff') format('woff'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* STYLES */
 
 html.r-doom-dark-fireblood body {
 	background: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-bg-dark.jpg") no-repeat top right fixed #050302;
     background-size: cover;
+    font-family: "roboto";
+    font-size: 12px;
 }
 
 html.r-doom-dark-fireblood a {
@@ -45,7 +66,7 @@ html.r-doom-dark-fireblood a {
 }
 
 html.r-doom-dark-fireblood #header {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-full-bg.jpg");
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-bg.jpg");
     background-repeat: repeat-x;
     height: 128px;
     background-position: center 19px;
@@ -89,7 +110,7 @@ html.r-doom-dark-fireblood #header-img {
 }
 
 html.r-doom-dark-fireblood .tabmenu li a {
-    padding: 2px 6px 10px 6px;
+    padding: 4px 6px 10px 6px;
     background-color: #980000;
 	background: -moz-linear-gradient(top, rgba(152,0,0,1) 0%, rgba(152,0,0,1) 72%, rgba(152,0,0,0) 100%);
 	background: -webkit-linear-gradient(top, rgba(152,0,0,1) 0%,rgba(152,0,0,1) 72%,rgba(152,0,0,0) 100%);
@@ -157,11 +178,23 @@ html.r-doom-dark-fireblood .drop-choices a.choice:hover {
 	color: #980000;
 }
 
+html.r-doom-dark-fireblood .link.last-clicked {
+    border: 1px dotted #793535;
+    overflow: hidden;
+    background: rgba(0,0,0,0.45);
+    -webkit-border-radius:0 4px 4px;
+    -moz-border-radius:0 4px 4px;
+    border-radius:0 4px 4px;
+}
+
 html.r-doom-dark-fireblood .side {
     background-color: rgba(98, 0, 0, 0.45);
     padding: 10px;
     margin: 0 0 0 20px;
 	color: #fff;
+    -webkit-border-radius:0 0 0 8px;
+    -moz-border-radius:0 0 0 8px;
+    border-radius: 0 0 0 8px;
 }
 
 html.r-doom-dark-fireblood .side a {
@@ -174,39 +207,79 @@ html.r-doom-dark-fireblood .login-form-side {
     background: rgba(0,0,0,0.666);
 }
 
-html.r-doom-dark-fireblood .morelink {
-    border: 1px solid #ff7e00;
-    background: #ff0606 ;
-    background-image: none;
-	border-radius: 0 4px 4px 4px;
-}
-
 html.r-doom-dark-fireblood .morelink .nub {
 	background: none;
 }
 
+html.r-doom-dark-fireblood .morelink {
+    border: 0;
+    background: none;
+    background-image: none;
+}
+
+/*
 html.r-doom-dark-fireblood .side .morelink a {
     text-decoration: none;
     color: ##ffdab6;
     letter-spacing: -0.06em;
     text-transform: lowercase;
     font-size: 1.166em;
-	color: #fff;
+color: #fff;
 }
+*/
 
 html.r-doom-dark-fireblood .side .morelink:hover, html.r-doom-dark-fireblood .mlh, html.r-doom-dark-fireblood .morelink:hover .nub, html.r-doom-dark-fireblood .mlhn {
-	background-image: none;
-	background: rgb(255, 99, 0);
-	border: 1px solid rgb(255, 99, 0);
-	-webkit-transition: all 666ms ease-in-out;
-	-moz-transition: all 666ms ease-in-out;
-	-ms-transition: all 666ms ease-in-out;
-	-o-transition: all 666ms ease-in-out;
-	transition: all 666ms ease-in-out;
+background-image: none;
+background: none;
+border: none;
+-webkit-transition: all 666ms ease-in-out;
+-moz-transition: all 666ms ease-in-out;
+-ms-transition: all 666ms ease-in-out;
+-o-transition: all 666ms ease-in-out;
+transition: all 666ms ease-in-out;
 }
 
 html.r-doom-dark-fireblood .morelink:hover .nub {
 	display: none;
+}
+
+html.r-doom-dark-fireblood .hover-bubble {
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius:0 4px 4px;
+    -moz-border-radius:0 4px 4px;
+    border-radius: 0 4px 4px;
+}
+
+html.r-doom-dark-fireblood .hover-bubble.multi-selector strong {
+    color: #666;
+}
+
+html.r-doom-dark-fireblood .sidebox .spacer {
+    background: rgba(255, 255, 255, 0.28);
+    padding-top: 15px;
+    -webkit-border-radius:0 0 4px 4px;
+    -moz-border-radius:0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+html.r-doom-dark-fireblood .sidebox .spacer a {
+    background-position: -69px -353px;
+}
+
+html.r-doom-dark-fireblood .sidebox .subtitle {
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood .sidecontentbox .title h1 {
+    color: rgb(155, 126, 126);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+html.r-doom-dark-fireblood .sidecontentbox ul.content {
+    margin-top: 0;
+    border-color: #750E0A;
+    background: rgba(0, 0, 0, 0.666);
 }
 
 html.r-doom-dark-fireblood .md {
@@ -214,7 +287,7 @@ html.r-doom-dark-fireblood .md {
 }
 
 html.r-doom-dark-fireblood .md a {
-    color: #d30000;
+    color: #BF3232;
     text-decoration: none;
 }
 
@@ -230,8 +303,38 @@ html.r-doom-dark-fireblood .md hr {
     background: #750e0a;
 }
 
+html.r-doom-dark-fireblood .md code {
+    border: 1px solid #B3B3A6;
+    background-color: rgba(252, 252, 247, 0.46);
+    color: #000;
+    font-weight: bold;
+}
+
+html.r-doom-dark-fireblood .titlebox {
+    padding-top: 20px;
+}
+
 html.r-doom-dark-fireblood .titlebox h1 a {
     color: #f00;
+}
+
+html.r-doom-dark-fireblood .titlebox form.toggle, html.r-doom-dark-fireblood .leavemoderator {
+    padding: 0 5px 5px 1px;
+    color: #fff;
+    background: #FF3D00;
+    border-radius: 0 4px 4px 4px;
+}
+
+html.r-doom-dark-fireblood .titlebox .tagline, html.r-doom-dark-fireblood .titlebox .search-result-meta {
+    margin: 0 5px 15px;
+    background: rgba(0,0,0,0.45);
+    padding: 8px;
+    border-radius: 0 0 4px 4px;
+}
+
+html.r-doom-dark-fireblood .subscribe-button a {
+    color: #fff;
+    border: 0;
 }
 
 html.r-doom-dark-fireblood .discuss-ad {
@@ -254,9 +357,11 @@ html.r-doom-dark-fireblood .thing {
 	transition: all 256ms ease-in-out;
 }
 
+/*
 html.r-doom-dark-fireblood .thing:hover {
 	background: rgba(95, 0, 0, 0.3);
 }
+*/
 
 html.r-doom-dark-fireblood .link .rank {
     color: #240C0C;
@@ -273,10 +378,15 @@ html.r-doom-dark-fireblood .link .score {
 }
 
 html.r-doom-dark-fireblood .thing .title {
-    color: #d72727;
+    color: rgb(156, 102, 102);
+    font-weight: bold;
 }
 
-html.r-doom-dark-fireblood .thing .title:hover, html.r-doom-dark-fireblood .thing .title:visited {
+html.r-doom-dark-fireblood .thing .title:visited {
+    color: rgb(162, 84, 34);
+}
+
+html.r-doom-dark-fireblood .thing .title:hover {
     color: rgb(255, 99, 0);
 }
 
@@ -296,10 +406,24 @@ html.r-doom-dark-fireblood .expando-button {
     background: none;
 }
 
-html.r-doom-dark-fireblood .usertext-body, html.r-doom-dark-fireblood .media-preview {
+html.r-doom-dark-fireblood .usertext-body, html.r-doom-dark-fireblood .media-preview, html.r-doom-dark-fireblood .expando iframe {
 	border: 1px solid rgba(255, 0, 0, 0.45);
 	background: rgba(0, 0, 0, 0.667) none repeat scroll 0% 0%;
 	border-radius: 0px 8px 8px 7px;
+}
+
+html.r-doom-dark-fireblood .expando iframe {
+    padding: 10px 0 0 10px;
+}
+
+html.r-doom-dark-fireblood .usertext-edit textarea, html.r-doom-dark-fireblood input[type=text], html.r-doom-dark-fireblood #search input[type=text] {
+    background: #420A0A;
+    color: #fff;
+    border: 1px solid #f00;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.58);
+    padding: 5px;
+    outline: none;
 }
 
 html.r-doom-dark-fireblood .usertext-body {
@@ -314,6 +438,15 @@ html.r-doom-dark-fireblood .link .usertext-body .md {
     background: none;
     border: 0;
     color: #eee;
+}
+
+html.r-doom-dark-fireblood .linkinfo .score .number {
+    font-size: 32px;
+}
+
+html.r-doom-dark-fireblood .linkinfo {
+    border: 1px solid #FF0000;
+    background-color: #292929;
 }
 
 html.r-doom-dark-fireblood .tagline .submitter, html.r-doom-dark-fireblood .search-result-meta .submitter {
@@ -341,6 +474,14 @@ html.r-doom-dark-fireblood input[type="text"], html.r-doom-dark-fireblood input[
 
 html.r-doom-dark-fireblood #searchexpando, html.r-doom-dark-fireblood #moresearchinfo {
     color: #600;
+}
+
+html.r-doom-dark-fireblood #searchexpando {
+    background-color: rgba(255, 221, 0, 0.27);
+}
+
+html.r-doom-dark-fireblood #searchexpando label {
+    color: #fff;
 }
 
 html.r-doom-dark-fireblood .midcol {
@@ -382,4 +523,54 @@ html.r-doom-dark-fireblood .footer .col {
 
 html.r-doom-dark-fireblood .footer .col:first-child {
     border-left: 0;
+}
+
+html.r-doom-dark-fireblood .comment .child, html.r-doom-dark-fireblood .comment .showreplies {
+    border-left: 0;
+}
+
+html.r-doom-dark-fireblood button, html.r-doom-dark-fireblood .side .morelink a {
+    position: relative;
+    margin: 0px 10px 10px 0px;
+    border-radius: 0 8px 8px;
+    color: #FFF;
+    text-decoration: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 17px;
+    text-shadow: 1px 2px rgba(117, 0, 0, 0.41);
+    background-color: #FF6300;
+    border-bottom: 5px solid #f00;
+    border-color: #FF996D #FF996D #793914;
+    font-weight: bold;
+    letter-spacing: normal;
+    opacity: 0.8;
+    /* Animation */
+    transition: all 256ms;
+    -webkit-transition: all 256ms;
+}
+
+html.r-doom-dark-fireblood .side .morelink a {
+    margin: 20px 0;
+    width: auto;
+}
+
+html.r-doom-dark-fireblood button.save {
+    text-shadow: 1px 2px rgba(0, 117, 3, 0.41);
+    background-color: #48be38;
+    border-bottom: 5px solid #008d03;
+    border-color: #a1ff9d #a1ff9d #1a7938;
+}
+
+html.r-doom-dark-fireblood button:hover, html.r-doom-dark-fireblood button:focus, html.r-doom-dark-fireblood .side .morelink a:hover, html.r-doom-dark-fireblood .side .morelink a:focus {
+    opacity: 1;
+    text-decoration: none;
+    color: #fff;
+}
+
+html.r-doom-dark-fireblood button:active, html.r-doom-dark-fireblood .side .morelink a:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom-width: 1px;
+    margin-bottom: 4px;
 }

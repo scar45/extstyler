@@ -1,6 +1,6 @@
 {
   "name": "/r/Doom Skin :: Dark Fireblood",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 2,
   "description": "Overlay the default /r/Doom subreddit styles with a darker, bloodier version.",
   "icons" : {
@@ -12,23 +12,25 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*/*", "file://*/*"],
+      "matches": ["*://*.reddit.com/*"],
       "css": ["src/r-doom-dark.css"],
       "js": ["src/jquery-1.12.2.min.js", "src/r-doom.js"]
     }
   ],
 
-  "permissions": [
-    "https://*.reddit.com/",
-    "http://*.reddit.com/"
-  ],
-
   "web_accessible_resources": [
     "src/images/r-doom-bg-dark.jpg",
+    "src/images/r-doom-header-bg.jpg",
     "src/images/r-doom-header-full-bg.jpg",
     "src/images/r-doom-sprites.png",
-    "src/images/snoo-doomguy.png"
+    "src/images/snoo-doomguy.png",
+    "src/fonts/Roboto-Regular-webfont.eot",
+    "src/fonts/Roboto-Regular-webfont.svg",
+    "src/fonts/Roboto-Regular-webfont.ttf",
+    "src/fonts/Roboto-Regular-webfont.woff",
+    "src/fonts/Roboto-Bold-webfont.eot",
+    "src/fonts/Roboto-Bold-webfont.svg",
+    "src/fonts/Roboto-Bold-webfont.ttf",
+    "src/fonts/Roboto-Bold-webfont.woff"
   ]
-
-
 }

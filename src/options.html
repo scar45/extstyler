@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>/r/Doom :: Dark Fireblood Extension Options</title>
+    <style>
+        body {
+            background: #4B0000;
+            color: #FF7500;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2, h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .header-setting {
+            width: 100%;
+            vertical-align: top;
+        }
+        .header-preview {
+            width: 680px;
+            height: 50px;
+            background-repeat: repeat-x;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #FF7500;
+            padding: 3px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+        select, option {
+            position: relative;
+            display: block;
+        }
+        input[type=radio] {
+            margin-bottom: 6px;
+        }
+        a {
+            color: #ff9892;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .cell-save {
+            width: 17%;
+            text-align: center;
+        }
+        #status {
+            color: #0f0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Options</h1>
+    <h2><strong>Low</strong> Detail Header:</h2>
+    <div id="header-choice-low" class="header-preview" src="" alt="Low Detail Header"></div><br>
+    <h2><strong>Medium</strong> Detail Header:</h2>
+    <div id="header-choice-med" class="header-preview" src="" alt="Medium Detail Header"></div><br>
+    <h2><strong>High</strong> Detail Header:</h2>
+    <div id="header-choice-hi" class="header-preview" src="" alt="High Detail Header"></div><br>
+    <table class="header-setting">
+        <tr>
+            <td>
+                <h2>Selected<br>Header Version:</h2>
+                <select id="header-type">
+                    <option value="header-low">Low Detail</option>
+                    <option value="header-med">Medium Detail</option>
+                    <option value="header-hi">High Detail</option>
+                </select>
+            </td>
+            <td>
+                <label>
+                    <input type="checkbox" id="homelink">
+                    Link the main logo to /r/Doom instead of Reddit's homepage
+                </label>
+                <br>
+                <br>
+                <label>
+                    <input type="checkbox" id="bodyfont">
+                    Use techy <a href="https://www.google.com/fonts/specimen/Aldrich"><strong>Aldrich</strong></a> font for ALL content (not just post titles)
+                </label>
+                <br>
+                <br>
+                <label>
+                    <input type="checkbox" id="sounds">
+                    Enable sound effects for Up/Down/Cancel votes
+                </label>
+            </td>
+            <td class="cell-save">
+                <h3 id="status">&nbsp;</h3>
+                <button id="save">Save</button>
+            </td>
+        </tr>
+    </table>
+    <script src="jquery-1.12.2.min.js"></script>
+    <script src="options.js"></script>
+    </body>
+</html>

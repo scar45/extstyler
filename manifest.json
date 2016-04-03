@@ -1,14 +1,23 @@
 {
   "name": "/r/Doom Skin :: Dark Fireblood",
-  "version": "1.2",
+  "version": "1.3",
   "manifest_version": 2,
-  "description": "Overlay the default /r/Doom subreddit styles with a darker, bloodier version.",
+  "description": "Overlay the default /r/Doom subreddit styles with a darker, bloodier version that's customizable.",
+  "options_ui": {
+    "page": "src/options.html",
+    "chrome_style": true
+  },
+
   "icons" : {
     "16": "icons/icon16.png",
     "38": "icons/icon38.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+
+  "permissions": [
+    "storage"
+  ],
 
   "content_scripts": [
     {
@@ -20,17 +29,28 @@
 
   "web_accessible_resources": [
     "src/images/r-doom-bg-dark.jpg",
-    "src/images/r-doom-header-bg.jpg",
+    "src/images/r-doom-header-low-bg.jpg",
+    "src/images/r-doom-header-med-bg.jpg",
+    "src/images/r-doom-header-hi-bg.jpg",
     "src/images/r-doom-header-full-bg.jpg",
     "src/images/r-doom-sprites.png",
     "src/images/snoo-doomguy.png",
-    "src/fonts/Roboto-Regular-webfont.eot",
-    "src/fonts/Roboto-Regular-webfont.svg",
-    "src/fonts/Roboto-Regular-webfont.ttf",
-    "src/fonts/Roboto-Regular-webfont.woff",
+    "src/sounds/dsplpain.wav",
+    "src/sounds/dsslop.wav",
+    "src/sounds/dswpnup.wav",
+    "src/sounds/dsgetpow.wav",
+    "src/fonts/aldrich-regular-webfont.eot",
+    "src/fonts/aldrich-regular-webfont.svg",
+    "src/fonts/aldrich-regular-webfont.ttf",
+    "src/fonts/aldrich-regular-webfont.woff",
+    "src/fonts/aldrich-regular-webfont.woff2",
     "src/fonts/Roboto-Bold-webfont.eot",
     "src/fonts/Roboto-Bold-webfont.svg",
     "src/fonts/Roboto-Bold-webfont.ttf",
-    "src/fonts/Roboto-Bold-webfont.woff"
+    "src/fonts/Roboto-Bold-webfont.woff",
+    "src/fonts/Roboto-Regular-webfont.eot",
+    "src/fonts/Roboto-Regular-webfont.svg",
+    "src/fonts/Roboto-Regular-webfont.ttf",
+    "src/fonts/Roboto-Regular-webfont.woff"
   ]
 }

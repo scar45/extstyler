@@ -10,19 +10,7 @@
 
 	Thanks!
 
-[Update] Snoo image in header, since this can't be handled strictly by CSS:
-
-	Change:
-		<img id="header-img" src="//b.thumbs.redditmedia.com/KoDFy3XO2ZsI4QZcPksWPFf5nz4-cjnSOZjzPAeQRPY.png" alt="Doom" height="100" width="155">
-	to:
-		<img id="header-img" src="http://i.imgur.com/SBUyA5h.png" alt="Doom">
-
 */
-
-/* IMPORTS */
-
-/* Source Sans */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 /* Roboto */
 @font-face {
@@ -46,6 +34,19 @@
     font-style: normal;
 }
 
+/* Aldrich */
+@font-face {
+    font-family: 'aldrich';
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.eot');
+    src: url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.woff2') format('woff2'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.woff') format('woff'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.ttf') format('truetype'),
+    url('chrome-extension://__MSG_@@extension_id__/src/fonts/aldrich-regular-webfont.svg#aldrichregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* STYLES */
 
 html.r-doom-dark-fireblood body {
@@ -63,23 +64,41 @@ html.r-doom-dark-fireblood a {
 	-ms-transition: all 256ms ease-in-out;
 	-o-transition: all 256ms ease-in-out;
 	transition: all 256ms ease-in-out;
+
 }
 
 html.r-doom-dark-fireblood #header {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-bg.jpg");
     background-repeat: repeat-x;
     height: 128px;
     background-position: center 19px;
-	border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+html.r-doom-dark-fireblood #header.header-type-low {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-low-bg.jpg");
+    background-position: left 19px;
+}
+
+html.r-doom-dark-fireblood #header.header-type-med {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-med-bg.jpg");
+}
+
+html.r-doom-dark-fireblood #header.header-type-hi {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-hi-bg.jpg");
 }
 
 html.r-doom-dark-fireblood .pagename a {
     color: #fff;
-	font-size: 1.666em;
-	position: relative;
-	top: 6px;
-	margin-right: 20px;
+    font-size: 1.666em;
+    font-family: aldrich;
+    position: relative;
+    top: 6px;
+    margin-right: 20px;
     text-shadow: 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 5px #f00;
+}
+
+html.r-doom-dark-fireblood ul#image-preview-list .description pre {
+    color: #8C8C8C;
 }
 
 html.r-doom-dark-fireblood .dropdown.srdrop .selected {
@@ -363,6 +382,15 @@ html.r-doom-dark-fireblood .thing:hover {
 }
 */
 
+html.r-doom-dark-fireblood .tagline, html.r-doom-dark-fireblood .search-result-meta {
+    font-size: inherit;
+}
+
+html.r-doom-dark-fireblood time {
+    font-weight: bold;
+    color: #b2ab65;
+}
+
 html.r-doom-dark-fireblood .link .rank {
     color: #240C0C;
     text-align: center;
@@ -374,13 +402,48 @@ html.r-doom-dark-fireblood .link .score {
     color: #fff;
 	color: rgb(255, 99, 0);
 	margin: 5px 0;
-	font-size: 1.1em;
+	font-size: 1.4em;
+    font-family: aldrich;
 }
 
 html.r-doom-dark-fireblood .thing .title {
-    color: rgb(156, 102, 102);
-    font-weight: bold;
+    color: rgb(174, 64, 64);
 }
+
+html.r-doom-dark-fireblood .link a.title {
+    letter-spacing: -0.05em;
+    margin-bottom: 0;
+    font-family: aldrich, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+
+    text-decoration: none;
+    transition: 0.45s;
+    position: relative;
+}
+
+html.r-doom-dark-fireblood .link a.title::before {
+    content: '';
+    transition: inherit;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #d00000;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+}
+html.r-doom-dark-fireblood .link a.title:active, html.r-doom-dark-fireblood .link a.title:hover {
+    outline: 0;
+}
+html.r-doom-dark-fireblood .link a.title:active::before, html.r-doom-dark-fireblood .link a.title:hover::before {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 
 html.r-doom-dark-fireblood .thing .title:visited {
     color: rgb(162, 84, 34);
@@ -392,6 +455,29 @@ html.r-doom-dark-fireblood .thing .title:hover {
 
 html.r-doom-dark-fireblood .thing.stickied.link a.title {
     color: #FFF;
+}
+
+html.r-doom-dark-fireblood .formtabs-content {
+    border-top: 4px solid #980000;
+}
+
+html.r-doom-dark-fireblood .infobar {
+    background-color: #A18400;
+}
+
+html.r-doom-dark-fireblood .roundfield {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255,0,0,0.33);
+    padding: 5px 20px 10px;
+}
+
+html.r-doom-dark-fireblood .submit_text h1 {
+    color: #FF0000;
+}
+
+html.r-doom-dark-fireblood .content.submit .info-notice {
+    background-color: rgba(98, 0, 0, 0.45098);
+    border: 1px solid #FFA500;
 }
 
 html.r-doom-dark-fireblood .tagline a, html.r-doom-dark-fireblood .search-result-meta a {
@@ -416,7 +502,7 @@ html.r-doom-dark-fireblood .expando iframe {
     padding: 10px 0 0 10px;
 }
 
-html.r-doom-dark-fireblood .usertext-edit textarea, html.r-doom-dark-fireblood input[type=text], html.r-doom-dark-fireblood #search input[type=text] {
+html.r-doom-dark-fireblood textarea, html.r-doom-dark-fireblood input[type=text], html.r-doom-dark-fireblood input[type=password], html.r-doom-dark-fireblood input[type=url], html.r-doom-dark-fireblood #search input[type=text] {
     background: #420A0A;
     color: #fff;
     border: 1px solid #f00;
@@ -440,13 +526,18 @@ html.r-doom-dark-fireblood .link .usertext-body .md {
     color: #eee;
 }
 
+html.r-doom-dark-fireblood .linkinfo {
+    border: 1px solid #FF0000;
+    background-color: #292929;
+}
+
 html.r-doom-dark-fireblood .linkinfo .score .number {
     font-size: 32px;
 }
 
-html.r-doom-dark-fireblood .linkinfo {
-    border: 1px solid #FF0000;
-    background-color: #292929;
+html.r-doom-dark-fireblood .linkinfo .shortlink input {
+    font-size: 100%;
+    width: 205px;
 }
 
 html.r-doom-dark-fireblood .tagline .submitter, html.r-doom-dark-fireblood .search-result-meta .submitter {
@@ -484,9 +575,13 @@ html.r-doom-dark-fireblood #searchexpando label {
     color: #fff;
 }
 
+html.r-doom-dark-fireblood body >.content .link .midcol, html.r-doom-dark-fireblood .midcol-spacer {
+    width: 45px;
+}
+
 html.r-doom-dark-fireblood .midcol {
-    margin-right: 14px;
-    margin-left: 10px;
+    margin-right: 7px;
+    margin-left: 3px;
 }
 
 html.r-doom-dark-fireblood .arrow.up, html.r-doom-dark-fireblood .arrow.down {

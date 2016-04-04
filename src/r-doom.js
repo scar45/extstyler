@@ -51,9 +51,28 @@ if(pathname.match(subreddits)) {
       if (items.headerPref == "header-low") {
         $("#header").addClass("header-type-low");
       }
+      if (items.headerPref == "header-random") {
+        // Setup the Header options
+        var extPathHeaderLow = chrome.extension.getURL('src/images/r-doom-header-low-bg.jpg');
+        var extPathHeaderMed= chrome.extension.getURL('src/images/r-doom-header-med-bg.jpg');
+        var extPathHeaderHi = chrome.extension.getURL('src/images/r-doom-header-hi-bg.jpg');
+
+        var headerImgArray = new Array();
+        headerImgArray[0] = extPathHeaderLow;
+        headerImgArray[1] = extPathHeaderMed;
+        headerImgArray[2] = extPathHeaderHi;
+
+        getRandomImage(headerImgArray, "");
+
+        function getRandomImage(imgAr, path) {
+          var num = Math.floor( Math.random() * imgAr.length );
+          var img = imgAr[ num ];
+          $("#header").css("backgroundImage", "url(" + img + ")");
+        }
+      }
       if (items.fontPref) {
         $("body").css("fontFamily", "aldrich");
-        $("html.r-doom-dark-fireblood .linkinfo").css("fontFamily", "aldrich");
+        $("html.r-doom-dark-fireblood .linkinfo, html.r-doom-dark-fireblood .titlebox h1 a").css("fontFamily", "aldrich");
         $("html.r-doom-dark-fireblood .linkinfo .date span").css("fontSize", "13px");
       }
       if (items.useSounds){

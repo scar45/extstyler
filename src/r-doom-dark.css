@@ -68,8 +68,9 @@ html.r-doom-dark-fireblood a {
 }
 
 html.r-doom-dark-fireblood #header {
-    background-repeat: repeat-x;
     height: 128px;
+    background-color: #700;
+    background-repeat: repeat-x;
     background-position: center 19px;
     border-bottom: 1px solid #000;
 }
@@ -334,7 +335,9 @@ html.r-doom-dark-fireblood .titlebox {
 }
 
 html.r-doom-dark-fireblood .titlebox h1 a {
-    color: #f00;
+    color: #b00;
+    text-transform: uppercase;
+    font-family: inherit;
 }
 
 html.r-doom-dark-fireblood .titlebox form.toggle, html.r-doom-dark-fireblood .leavemoderator {
@@ -545,9 +548,55 @@ html.r-doom-dark-fireblood .tagline .submitter, html.r-doom-dark-fireblood .sear
 }
 
 html.r-doom-dark-fireblood .flair, html.r-doom-dark-fireblood .linkflairlabel {
-    background: #980000;
     color: #fdd;
-    border: 0px solid #f00;
+    /*    background: #980000;
+        border: 0px solid #f00;*/
+}
+
+html.r-doom-dark-fireblood span.flair {
+    color: #FF6300;
+}
+
+html.r-doom-dark-fireblood .flairselector form {
+    border: 1px solid rgb(255, 99, 0);
+    background: rgba(0,0,0,0.45);
+}
+
+html.r-doom-dark-fireblood .flairselector {
+    background: rgba(89, 7, 7, 0.86);
+    box-shadow: none;
+    border: 1px solid rgb(255, 99, 0);
+}
+
+html.r-doom-dark-fireblood .flairselector.drop-choices.active {
+    border: none;
+}
+
+html.r-doom-dark-fireblood .flairselector h2 {
+    background: none;
+    color: #FF6300;
+    border-bottom: 1px solid #b00;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+html.r-doom-dark-fireblood .flairselector li {
+    border-color: #900;
+    border-width: 0px;
+    padding: 3px;
+}
+
+html.r-doom-dark-fireblood .flairselector li.selected {
+    border: 1px dashed #FF6300;
+}
+
+html.r-doom-dark-fireblood .flairselector li:hover {
+    background-color: #FF6300;
+}
+
+html.r-doom-dark-fireblood .flairselector li a {
+    color: #fff !important;
 }
 
 html.r-doom-dark-fireblood .wiki-page .pageactions .wikiaction-current {

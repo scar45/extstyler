@@ -88,7 +88,7 @@ html.r-doom-dark-fireblood #header.header-type-hi {
     background-image: url("chrome-extension://__MSG_@@extension_id__/src/images/r-doom-header-hi-bg.jpg");
 }
 
-html.r-doom-dark-fireblood .pagename a {
+html.r-doom-dark-fireblood .pagename a, html.r-doom-dark-fireblood .titlebox h1 a {
     color: #fff;
     font-size: 1.666em;
     font-family: aldrich;
@@ -96,6 +96,10 @@ html.r-doom-dark-fireblood .pagename a {
     top: 6px;
     margin-right: 20px;
     text-shadow: 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 15px #f00, 1px 1px 5px #f00;
+}
+
+html.r-doom-dark-fireblood .titlebox h1 a {
+    font-size: 1.2em;
 }
 
 html.r-doom-dark-fireblood ul#image-preview-list .description pre {
@@ -217,6 +221,10 @@ html.r-doom-dark-fireblood .side {
     border-radius: 0 0 0 8px;
 }
 
+html.r-doom-dark-fireblood .side .number {
+    font-weight: bold;
+}
+
 html.r-doom-dark-fireblood .side a {
     text-decoration: none;
     color: #D87B7B;
@@ -335,7 +343,6 @@ html.r-doom-dark-fireblood .titlebox {
 }
 
 html.r-doom-dark-fireblood .titlebox h1 a {
-    color: #b00;
     text-transform: uppercase;
     font-family: inherit;
 }
@@ -367,6 +374,10 @@ html.r-doom-dark-fireblood .content {
     margin: -5px 0 0;
     padding-top: 20px;
 	color: #fff;
+}
+
+html.r-doom-dark-fireblood body.submit-page .content {
+    padding-left: 10px;
 }
 
 html.r-doom-dark-fireblood .thing {
@@ -447,7 +458,6 @@ html.r-doom-dark-fireblood .link a.title:active::before, html.r-doom-dark-firebl
     transform: scaleX(1);
 }
 
-
 html.r-doom-dark-fireblood .thing .title:visited {
     color: rgb(162, 84, 34);
 }
@@ -458,6 +468,7 @@ html.r-doom-dark-fireblood .thing .title:hover {
 
 html.r-doom-dark-fireblood .thing.stickied.link a.title {
     color: #FFF;
+    letter-spacing: normal;
 }
 
 html.r-doom-dark-fireblood .formtabs-content {
@@ -466,6 +477,7 @@ html.r-doom-dark-fireblood .formtabs-content {
 
 html.r-doom-dark-fireblood .infobar {
     background-color: #A18400;
+    padding: 5px 15px;
 }
 
 html.r-doom-dark-fireblood .roundfield {
@@ -485,6 +497,11 @@ html.r-doom-dark-fireblood .content.submit .info-notice {
 
 html.r-doom-dark-fireblood .tagline a, html.r-doom-dark-fireblood .search-result-meta a {
     color: #E4E4E4;
+    font-weight: normal;
+}
+
+html.r-doom-dark-fireblood .entry .buttons li a {
+    font-weight: normal;
 }
 
 html.r-doom-dark-fireblood .expando-button.video.collapsed, html.r-doom-dark-fireblood .expando-button.selftext.collapsed, html.r-doom-dark-fireblood .expando-button.selftext.collapsed:hover, html.r-doom-dark-fireblood .eb-sch, html.r-doom-dark-fireblood .expando-button.video.collapsed:hover, html.r-doom-dark-fireblood .eb-vch, html.r-doom-dark-fireblood .expando-button.selftext.expanded, html.r-doom-dark-fireblood .eb-se, html.r-doom-dark-fireblood .expando-button.video.expanded, html.r-doom-dark-fireblood .eb-ve, html.r-doom-dark-fireblood .expando-button.video.expanded:hover, html.r-doom-dark-fireblood .eb-veh, html.r-doom-dark-fireblood .expando-button.selftext.expanded:hover, html.r-doom-dark-fireblood .eb-seh {

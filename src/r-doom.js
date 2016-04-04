@@ -34,7 +34,7 @@ if(pathname.match(subreddits)) {
     chrome.storage.sync.get({
       enableHomeLink: true,
       headerPref: 'header-med',
-      fontPref: true,
+      fontPref: false,
       useSounds: false
     }, function(items) {
       console.log(items.enableHomeLink, items.headerPref, items.useSounds, items.fontPref);

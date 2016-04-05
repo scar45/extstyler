@@ -1,22 +1,25 @@
 // Saves options to chrome.storage.sync.
 function save_options() {
-    var homeLink= $("#homelink").is(':checked');
+    var useNotifications = $("#notifications").is(':checked');
+    var homeLink = $("#homelink").is(':checked');
     var useSounds = $("#sounds").is(':checked');
     var bodyFont = $("#bodyfont").is(':checked');
     var headerType = $("#header-type").val();
     console.log(homeLink, headerType, bodyFont, useSounds);
 
     chrome.storage.sync.set({
+        enableNotifications: useNotifications,
         enableHomeLink: homeLink,
         headerPref: headerType,
         fontPref: bodyFont,
         useSounds: useSounds
     }, function() {
         // Update status to let user know options were saved.
-        $("#status").html("Options saved.");
+        $("#status").html("Saved!");
         setTimeout(function() {
             $("#status").html("&nbsp;");
-        }, 3000);
+            chrome.runtime.reload();
+        }, 1500);
     });
 }
 
@@ -25,11 +28,13 @@ function save_options() {
 function restore_options() {
     // Set defaults
     chrome.storage.sync.get({
+        enableNotifications: false,
         enableHomeLink: true,
         headerPref: 'header-med',
         fontPref: false,
         useSounds: false
     }, function(items) {
+        $("#notifications").prop('checked', items.enableNotifications);
         $("#homelink").prop('checked', items.enableHomeLink);
         $("#header-type").val(items.headerPref);
         $("#bodyfont").prop('checked', items.fontPref);

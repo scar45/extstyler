@@ -44,8 +44,11 @@
         a:hover {
             text-decoration: underline;
         }
+        label {
+            font-size: 15px;
+        }
         .cell-save {
-            width: 17%;
+            width: 10%;
             text-align: center;
         }
         #status {
@@ -76,6 +79,12 @@
                 </select>
             </td>
             <td>
+                <label>
+                    <input type="checkbox" id="notifications">
+                    Show notifications when new posts are detected
+                </label>
+                <br>
+                <br>
                 <label>
                     <input type="checkbox" id="homelink">
                     Link the main logo to /r/Doom instead of Reddit's homepage

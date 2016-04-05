@@ -314,6 +314,10 @@ html.r-doom-dark-fireblood .md {
     color: #9B7E7E;
 }
 
+html.r-doom-dark-fireblood .md p {
+    margin: 1em 0;
+}
+
 html.r-doom-dark-fireblood .md a {
     color: #BF3232;
     text-decoration: none;

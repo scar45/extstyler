@@ -50,7 +50,7 @@ function checkAPI() {
         },
 
         complete: function(){
-            setTimeout(checkAPI, 10000);
+            setTimeout(checkAPI, 60000);
         }
     });
 

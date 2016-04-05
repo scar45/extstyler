@@ -316,6 +316,7 @@ html.r-doom-dark-fireblood .md {
 
 html.r-doom-dark-fireblood .md p {
     margin: 1em 0;
+    font-size: 0.95em;
 }
 
 html.r-doom-dark-fireblood .md a {
@@ -380,8 +381,54 @@ html.r-doom-dark-fireblood .content {
 	color: #fff;
 }
 
+html.r-doom-dark-fireblood .content > span {
+    display: block;
+    margin-top: 40px;
+}
+
+html.r-doom-dark-fireblood .content hr {
+    border-color: #D64F00;
+}
+
+html.r-doom-dark-fireblood .wiki-page .pageactions {
+    border-color: #f00;
+}
+
+html.r-doom-dark-fireblood .wiki-page .wiki-page-content .wiki>.toc>ul {
+    border-color: #f00;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.65);
+}
+
+html.r-doom-dark-fireblood .wiki-page-content .md h1, html.r-doom-dark-fireblood .wiki-page-content .md h6 {
+    color: #b00;
+}
+
+html.r-doom-dark-fireblood .wiki-page-content .md h2 {
+    color: #D64F00;
+}
+
+html.r-doom-dark-fireblood .wiki-page .wiki-page-content .description h2 {
+    color: #565352;
+}
+
+html.r-doom-dark-fireblood .subreddit-rules-page .md-container .md .subreddit-rule-description {
+    color: #CECECE;
+}
+
+html.r-doom-dark-fireblood .subreddit-rules-page .md-container .md .subreddit-rule-title {
+    font-size: 1.45em;
+}
+
 html.r-doom-dark-fireblood body.submit-page .content {
     padding-left: 10px;
+}
+
+html.r-doom-dark-fireblood .subreddit-rule-item:hover {
+    background: rgba(92, 0, 0, 0.42);
+    border-radius: 8px;
+    border: 1px solid #b00;
+    padding: 9px;
 }
 
 html.r-doom-dark-fireblood .thing {
@@ -590,7 +637,8 @@ html.r-doom-dark-fireblood .flairselector {
 }
 
 html.r-doom-dark-fireblood .flairselector.drop-choices.active {
-    border: none;
+    border-radius: 8px;
+    border: 1px solid #f00;
 }
 
 html.r-doom-dark-fireblood .flairselector h2 {
